@@ -2,7 +2,7 @@ import main_functions
 import constants
 import game_1
 import const_1
-import bd
+#import bd
 from telegram.ext import Updater
 from telegram.ext import CommandHandler, MessageHandler, Filters, CallbackQueryHandler
 from telegram import ReplyKeyboardRemove, ReplyKeyboardMarkup, InlineKeyboardMarkup, InlineKeyboardButton
@@ -58,7 +58,7 @@ def num_player_in_list(message):
 def command_start(bot, update):
     #print(update)
     #ПРОВЕРКА НА НАЛИЧИЕ ИГРОКА В БАЗЕ!!!
-    bd.insert_user(update.message.from_user.id)
+#    bd.insert_user(update.message.from_user.id)
     n = num_player_in_list(update.message)
     main_functions.main_menu_markup(bot, update.message, constants.start_message)
     # main_functions.check_to_reply_inline_markup(bot, update.message, constants.button_repeat_question)
